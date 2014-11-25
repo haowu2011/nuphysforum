@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Listing subjects</h1>
+    </div>
+    
+    <% @categories.each do |category| %>
+      <div class="col-md-3">
+        <a href="/categories/<%= category.id %>" class="thumbnail">
+          <img src="<%= category.image_url %>">
+        </a>
+      </div>
+    <% end %>
+    
+  
+ 
+  </div>
+</div>
+

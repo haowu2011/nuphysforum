@@ -1,0 +1,17 @@
+<h1>Editing Category #<%= @category.id %></h1>
+
+<form action="/categories/<%= @category.id %>/update">
+  <div>
+    <label for="category">category</label><br />
+    <input id="category" name="category" value="<%= @category.category  %>" type="text" />
+  </div>
+  <div>
+    <label for="image_url">image url</label><br />
+    <input id="image_url" name="image_url" value="<%= @category.image_url  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

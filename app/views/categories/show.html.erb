@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1> <%= @category.category %> </h1>
+      <div>
+        <a href="/categories">Back to index</a>
+      </div>
+
+      <h2> New Post </h2>
+      <form action="/create_post">
+        <div class="form-group">
+          <input id="contents" name="contents" type="text" class="form-control"/>
+          <input type="hidden" name="category_id" value="<%=@category.id%>">
+        </div>
+      </form>
+      
+    
+      
+      <div class="Posts">
+        <h2>Posts</h2>
+        
+        <% @category.posts.each do |post| %>
+        <% if post.user %> 
+          <div class="media">
+            <a class="pull-left" href="/users/<%=post.user.id%>">
+              <img class="media-object" src="<%=post.user.user_image %>" alt="user-image">
+            </a>
+            <div class="media-body">
+              <h3> <div><%= post.user.user_name %></div> </h3>
+              <div><a href="/posts/<%= post.id %>"><%= post.content %></a></div>
+              <div><a href="/posts/<%= post.id %>/destroy">Destroy</a></div>
+            </div>
+          </div> 
+        <% end %>
+        <% end %>
+        
+        
+        
+      
+      </div>
+    </div>
+  </div>
+</div>

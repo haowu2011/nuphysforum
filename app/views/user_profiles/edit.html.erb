@@ -1,0 +1,25 @@
+<h1>Editing User Profile #<%= @user_profile.id %></h1>
+
+<form action="/user_profiles/<%= @user_profile.id %>/update">
+  <div>
+    <label for="user_class">user_class</label><br />
+    <input id="user_class" name="user_class" value="<%= @user_profile.user_class  %>" type="text" />
+  </div>
+  <div>
+    <label for="enrollment_year">enrollment_year</label><br />
+    <input id="enrollment_year" name="enrollment_year" value="<%= @user_profile.enrollment_year  %>" type="text" />
+  </div>
+  <div>
+    <label for="user_major">user_major</label><br />
+    <input id="user_major" name="user_major" value="<%= @user_profile.user_major  %>" type="text" />
+  </div>
+  <div>
+    <label for="user_id">user_id</label><br />
+    <input id="user_id" name="user_id" value="<%= @user_profile.user_id  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

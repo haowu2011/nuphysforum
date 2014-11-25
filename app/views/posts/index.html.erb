@@ -1,0 +1,43 @@
+<h1>Posts</h1>
+
+<div class="container">
+  <div class="row">
+  <table>
+    
+    <tbody>
+    <% @posts.each do |post| %>
+      <%if post.user && post.category%>
+      <tr>
+            <div class="col-md-2">
+              <p><a href="/users/<%= post.user.id %>"><%= post.user.user_name %></a> </p>
+            </div>
+           
+            <div class="col-md-4">
+              <p><a href="/categories/<%= post.category.id %>"><%= post.category.category %></a></p>
+            </div>
+        
+        
+            <div class="col-md-4">
+              <p><%= post.content %></p> 
+            </div>
+            
+            <div class = "col-md-2">
+            <td><a href="/posts/<%= post.id %>">Show</a>
+            </td>
+            <td><a href="/posts/<%= post.id %>/edit">Edit</a></td>
+            <td><a href="/posts/<%= post.id %>/destroy">Destroy</a></td>
+        </div>
+      </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+       
+        
+        
+      
+
+
+

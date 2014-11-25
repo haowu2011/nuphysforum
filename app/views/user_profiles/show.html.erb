@@ -1,0 +1,21 @@
+<h1>User Profile #<%= @user_profile.id %></h1>
+
+<div>
+  <strong>User class</strong>:<br />
+  <p><%= @user_profile.user_class %></p>
+</div>
+<div>
+  <strong>Enrollment year</strong>:<br />
+  <p><%= @user_profile.enrollment_year %></p>
+</div>
+<div>
+  <strong>User major</strong>:<br />
+  <p><%= @user_profile.user_major %></p>
+</div>
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @user_profile.user_id %></p>
+</div>
+
+<a href="/user_profiles/<%= @user_profile.id %>/edit">Edit</a> |
+<a href="/user_profiles/<%= @user_profile.id %>/destroy">Destroy</a>

@@ -1,0 +1,33 @@
+<h1>User profiles</h1>
+
+<p><a href="/new_user_profile">Add a New User Profile</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User class</th>
+      <th>Enrollment year</th>
+      <th>User major</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @user_profiles.each do |user_profile| %>
+    <tr>
+          <td><%= user_profile.user_class %></td>
+          <td><%= user_profile.enrollment_year %></td>
+          <td><%= user_profile.user_major %></td>
+          <td><%= user_profile.user_id %></td>
+          <td><a href="/user_profiles/<%= user_profile.id %>">Show</a>
+        </td>
+      <td><a href="/user_profiles/<%= user_profile.id %>/edit">Edit</a></td>
+      <td><a href="/user_profiles/<%= user_profile.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
